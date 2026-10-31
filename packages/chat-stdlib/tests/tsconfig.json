@@ -4,7 +4,10 @@
   "compilerOptions": {
     "ignoreDeprecations": "6.0",
     "types": ["jest"],
-    "rootDir": ".."
+    "rootDir": "..",
+    "paths": {
+      "chat-stdlib": ["../dist/chat-stdlib-beta.d.ts"]
+    }
   },
   "include": ["."]
 }
