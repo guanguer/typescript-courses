@@ -2,6 +2,7 @@
   "name": "chat-stdlib",
   "packageManager": "yarn@3.6.4",
   "main": "dist/index.js",
+  "types": "dist/chat-stdlib.d.ts",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -21,6 +22,8 @@
     "@babel/preset-env": "^8.0.7",
     "@babel/preset-typescript": "^8.0.7",
     "@eslint/js": "^10.0.1",
+    "@microsoft/api-documenter": "^7.30.20",
+    "@microsoft/api-extractor": "^7.60.1",
     "@types/eslint": "8.0.0",
     "concurrently": "^10.0.6",
     "eslint": "^10.14.0",
