@@ -76,5 +76,6 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.associations": {
     "api-extractor.json": "jsonc"
-  }
+  },
+  "js/ts.tsdk.path": "node_modules/typescript/lib"
 }
