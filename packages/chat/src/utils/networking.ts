@@ -2,11 +2,10 @@ import { stringifyError } from './error'
 import { HTTPError } from './http-error.cjs'
 
 /**
- *
- * @param {RequestInfo} input
- * @param {RequestInit} [init]
+ * @param input
+ * @param init
  */
-async function getJSON(input, init) {
+async function getJSON(input: RequestInfo, init?: RequestInit) {
   try {
     const response = await fetch(input, init)
     const responseJSON = await response.json()
