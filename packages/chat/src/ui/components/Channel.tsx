@@ -8,7 +8,7 @@ import Loading from './Loading'
 import { IChannel, IMessage } from '../../types'
 
 const Channel: React.FC<{
-  channel: Pick<IChannel, Exclude<keyof IChannel, 'messages'>>
+  channel: Omit<IChannel, 'messages'>
 }> = ({ channel }) => {
   const [messages, setMessages] = React.useState<IMessage[]>()
   useAsyncDataEffect(
