@@ -5,13 +5,12 @@ import ChannelFooter from './Channel/Footer'
 import ChannelHeader from './Channel/Header'
 import ChannelMessage from './Channel/Message'
 import Loading from './Loading'
+import { IChannel, IMessage } from '../../types'
 
-const Channel = ({ channel }) => {
-  /**
-   * @type {any[] | null}
-   */
-  const initialMessages = null
-  const [messages, setMessages] = React.useState(initialMessages)
+const Channel: React.FC<{
+  channel: Pick<IChannel, Exclude<keyof IChannel, 'messages'>>
+}> = ({ channel }) => {
+  const [messages, setMessages] = React.useState<IMessage[]>()
   useAsyncDataEffect(
     () => getChannelMessages(channel.teamId, channel.id),
     {
@@ -37,12 +36,7 @@ const Channel = ({ channel }) => {
         role="list"
       >
         {messages.map((m) => (
-          <ChannelMessage
-            key={m.id}
-            body={m.body}
-            date={new Date(m.createdAt)}
-            user={m.user}
-          />
+          <ChannelMessage key={m.id} {...m} />
         ))}
       </div>
 

@@ -12,7 +12,10 @@
     "allowImportingTsExtensions": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "types": ["node", "jest"]
+    "types": ["node", "jest"],
+    "paths": {
+      "*": ["types/*"]
+    }
   },
   "include": [
     "src",
