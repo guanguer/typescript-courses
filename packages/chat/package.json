@@ -62,7 +62,8 @@
     "lint": "yarn eslint src server tests --ext .js,.ts,.jsx,.tsx,.mjs,.mts -c ./.eslintrc.js",
     "test": "yarn test-jest",
     "test-jest": "yarn jest tests",
-    "typecheck": "yarn tsc -P ."
+    "typecheck": "yarn tsc -P .",
+    "typetest": "yarn dtslint --localTs ../../node_modules/typescript/lib tests/types-dtslint"
   },
   "engines": {
     "node": ">=16.0.0"
